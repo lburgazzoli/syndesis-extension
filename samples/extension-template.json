@@ -1,0 +1,61 @@
+{
+    "action": {
+        "actionType": "extension",
+        "id": "log-body",
+        "name": "simple-log",
+        "description": "A simple function based logging extension (1)",
+        "descriptor": {
+            "kind": "BEAN",
+            "entrypoint": "io.syndesis.extension.SimpleExtension::log",
+            "inputDataShape": {
+                "kind": "any"
+            },
+            "outputDataShape": {
+                "kind": "any"
+            },
+            "propertyDefinitionSteps": []
+        },
+        "tags": []
+    },
+    "extension": {
+        "id": "-KzSYuq8zZ3ATmAVSYlR",
+        "name": "Syndesis Extension",
+        "description": "A simple Syndesis Extension",
+        "extensionId": "com.github.lburgazzoli:syndesis-extensions",
+        "version": "1.0.0-SNAPSHOT",
+        "tags": [
+            "experimental",
+            "feature"
+        ],
+        "actions": [
+            {
+                "actionType": "extension",
+                "id": "log-body",
+                "name": "simple-log",
+                "description": "A simple function based logging extension (1)",
+                "descriptor": {
+                    "kind": "BEAN",
+                    "entrypoint": "io.syndesis.extension.SimpleExtension::log",
+                    "inputDataShape": {
+                        "kind": "any"
+                    },
+                    "outputDataShape": {
+                        "kind": "any"
+                    },
+                    "propertyDefinitionSteps": []
+                },
+                "tags": []
+            }
+        ],
+        "dependencies": [
+            "io.syndesis.integration-runtime:runtime-api:jar:1.2.1",
+            "org.apache.camel:camel-core:jar:2.20.0",
+            "org.springframework.boot:spring-boot-starter:jar:1.5.8.RELEASE"
+        ],
+        "properties": {}
+    },
+    "stepKind": "extension",
+    "configuredProperties": {
+        "ascii": "false"
+    }
+}

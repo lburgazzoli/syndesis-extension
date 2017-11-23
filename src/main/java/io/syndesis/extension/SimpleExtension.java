@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 
 import com.github.lalyos.jfiglet.FigletFont;
 
+import io.syndesis.integration.runtime.api.SyndesisActionProperty;
 import io.syndesis.integration.runtime.api.SyndesisExtensionAction;
 
 public class SimpleExtension {
@@ -23,6 +24,11 @@ public class SimpleExtension {
         return this.ascii;
     }
 
+    @SyndesisActionProperty(
+        name = "ascii",
+        displayName = "ascii",
+        description = "Ascii"
+    )
     @SyndesisExtensionAction(
         id = "log-body", 
         name = "simple-log", 

@@ -23,8 +23,8 @@
     <!-- dependencies -->
     <spring-boot.version>1.5.8.RELEASE</spring-boot.version>
     <camel.version>2.20.0</camel.version>
-    <syndesis.version>1.1-SNAPSHOT</syndesis.version>
-    <syndesis-integration-runtime.version>1.2.1</syndesis-integration-runtime.version>
+    <syndesis.version>1.2-SNAPSHOT</syndesis.version>
+    <syndesis-integration-runtime.version>1.2-SNAPSHOT</syndesis-integration-runtime.version>
   </properties>
 
   <dependencyManagement>

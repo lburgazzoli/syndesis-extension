@@ -152,4 +152,86 @@
     </plugins>
   </build>
 
+
+  <profiles>
+    
+    <!-- ********************************************************* -->
+    <!-- Extension info taken from project                         -->
+    <!-- ********************************************************* -->
+
+    <profile>
+      <id>project</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>io.syndesis</groupId>
+            <artifactId>syndesis-maven-plugin</artifactId>
+            <version>${syndesis.version}</version>
+            <executions>
+              <execution>
+                <id>generate</id>
+                <goals>
+                  <goal>generate-metadata</goal>
+                </goals>
+              </execution>
+              <execution>
+                <id>repackage</id>
+                <goals>
+                  <goal>repackage-extension</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    
+    <!-- ********************************************************* -->
+    <!-- Extension info taken from plugin configuration            -->
+    <!-- ********************************************************* -->
+
+    <profile>
+      <id>config</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>io.syndesis</groupId>
+            <artifactId>syndesis-maven-plugin</artifactId>
+            <version>${syndesis.version}</version>
+            <configuration>
+                <extensionId>my-company-extension</extensionId>
+                <name>TheName</name>
+                <description>TheDescription</description>
+                <version>2.0.0</version>
+                <tags>extension,test</tags>
+            </configuration>
+            <executions>
+              <execution>
+                <id>generate</id>
+                <goals>
+                  <goal>generate-metadata</goal>
+                </goals>
+              </execution>
+              <execution>
+                <id>repackage</id>
+                <goals>
+                  <goal>repackage-extension</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+
+  </profiles>
+
 </project>
